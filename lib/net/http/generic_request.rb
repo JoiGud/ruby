@@ -36,7 +36,7 @@ class Net::HTTPGenericRequest
         @decode_content = true
         initheader = initheader ? initheader.dup : {}
         initheader["accept-encoding"] =
-          "gzip;q=1.0,deflate;q=0.6,identity;q=0.3"
+          "gzip;q=1.0,identity;q=0.3"
       end
     end
 

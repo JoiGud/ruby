@@ -251,7 +251,7 @@ class Net::HTTPResponse
     return yield @socket if self['content-range']
 
     case self['content-encoding']
-    when 'deflate', 'gzip', 'x-gzip' then
+    when 'gzip', 'x-gzip' then
       self.delete 'content-encoding'
 
       inflate_body_io = Inflater.new(@socket)
